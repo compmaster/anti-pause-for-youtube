@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Anti-Pause for YouTube",
+  "description": "Disables automatic pause due to user inactivity on youtube.com.",
+  "version": "1.0",
+  "permissions": [
+	"activeTab"
+  ],
+  "content_scripts": [
+	{
+	  "matches": ["*://*.youtube.com/*"],
+	  "css": [],
+	  "js": ["content.js"],
+	  "run_at": "document_start"
+	}
+  ],
+  "web_accessible_resources": [
+	"inject.js"
+  ]
+}
