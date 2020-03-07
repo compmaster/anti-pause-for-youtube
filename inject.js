@@ -1,5 +1,3 @@
-// TODO: If tab is in background, auto-play is paused. Examine why.
-
 /**
  * Modifies YouTube experiment flags to disable playback and auto-play pause.
  * NOTICE: It has been proven that modifying the following flags has no effect.
