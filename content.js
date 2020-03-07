@@ -65,17 +65,19 @@ function processPopupContainer(node) {
 			if (labelNode && buttonNodes.length === 1 && WARNING_MESSAGES.includes(labelNode.textContent.trim())) {
 				console.log('[ANTI-PAUSE] This should not happen but it happened');
 				console.log('[ANTI-PAUSE] Clicking YES on notification popup');
-				buttonNodes[0].click();
+				console.log(buttonNodes[0].closest('yt-button-renderer'));
+				buttonNodes[0].closest('yt-button-renderer').click();
 			}
 		}
 	}
-	if (messageNode && getComputedStyle(messageNode).style.display !== 'none') {
+	if (messageNode && getComputedStyle(messageNode).display !== 'none') {
 		let stringNode = messageNode.querySelector('papier-dialog-scrollable>div>yt-formatted-string');
 		let buttonNodes = messageNode.querySelectorAll('paper-button>yt-formatted-string');
 		if (stringNode && buttonNodes[0].length === 1 && PAUSED_MESSAGES.includes(stringNode.textContent.trim())) {
 			console.log('[ANTI-PAUSE] This should not happen - movie paused');
 			console.log('[ANTI-PAUSE] Clicking YES on dialog');
-			buttonNodes[0].click();
+			console.log(buttonNodes[0].closest('yt-button-renderer'));
+			buttonNodes[0].closest('yt-button-renderer').click();
 		}
 	}
 }

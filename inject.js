@@ -81,6 +81,6 @@ function updateActiveTime() {
 /**
  * Perform hacks each 30 seconds.
  */
-setInterval(disableAutoPause, 30000);
-setInterval(disableIdleTimeout, 30000);
-setInterval(updateActiveTime, 30000);
+setInterval(disableAutoPause, 3000);
+setInterval(disableIdleTimeout, 3000);
+setInterval(updateActiveTime, 3000);
